@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="report_dap_appointment" model="ir.actions.report">
+            <field name="name">Appointment Report</field>
+            <field name="model">dap.appointment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">dap.report_appointment</field>
+            <field name="report_file">dap.report_appointment</field>
+            <field name="binding_model_id" ref="model_dap_appointment"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_appointment">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div style="  margin:auto;width:50%;border:2px solid black">
+                <table>
+                    <tr>
+                        <th>
+                            <h4>Patient Name</h4>
+                        </th>
+                        <th>
+                            <h4>Appointment Time</h4>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><t t-esc="o.animal_id.name"/></td>
+                        <td><t t-esc="o.apt_time"/></td>
+                    </tr>
+                </table>
+                </div>
+            </t>
+        </t>
+        </template>
+    </data>
+</odoo>

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "uninstall",
+    'name': "dap",
 
     'summary': """
-        module for adding multiple modules uninstalling functionality""",
+        Module for the doctor appointment""",
 
     'description': """
         6073
@@ -19,15 +19,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','vetapp','sale_management','report_xlsx','web'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'wizards/download.xml',
         'views/views.xml',
         'views/templates.xml',
-        'views/uninstall_module.xml',
+        'views/mail_template.xml',
+        'reports/report.xml',
+        'reports/A_report_Excel.xml',
+        'views/templates_controller.xml',
     ],
+    # "images": ["js_framework_sample/static/description/icon.png"],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="index2">
+        <t t-call="website.layout">
+            <t t-set="title">sales order</t>
+            <div class="oe_container">
+                <div class="container">
+                    <t t-foreach="sales2" t-as="sale">
+                        <p>
+                            <t t-esc="sale.name"/>
+                            <t t-esc="sale.partner_id.name"/>
+                        </p>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="patients_page" name="Hospital Patients">
+        <t t-call="website.layout">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>
+                            Names
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div class="container">
+                        Hey subscribe the channel...!
+                        <t t-foreach="tests" t-as="tes">
+                            <tr>
+                                <td>
+                                    <t t-esc="tes.name"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </div>
+                </tbody>
+            </table>
+        </t>
+    </template>
+
+    <template id="index">
+        <t t-call="website.layout">
+            <t t-set="title">Sales Orders</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <t t-foreach="sales" t-as="sale">
+                        <p>
+                            <a t-attf-href="/dap/dap/{{slug(sale)}}">
+                                <t t-esc="sale.name"/>
+                            </a>
+                            <t t-esc="sale.partner_id.name"/>
+                        </p>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="sales_order">
+        <t t-call="website.layout">
+            <t t-set="title">Sales Orders</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <H1>SERIAL #
+                        <t t-esc="saleorder.name"/>
+                    </H1>
+                    <t t-esc="saleorder.partner_id.name"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

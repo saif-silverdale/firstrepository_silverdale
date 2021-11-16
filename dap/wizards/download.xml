@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--    Printing Excel report through Wizard-->
+
+    <report
+            id="report_dap_appointment_excel_wiz"
+            model="dap.download.wiz"
+            string="Generate XLSX Report Wiz"
+            report_type="xlsx"
+            name="dap.generate_xlsx_report"
+            file="generate_xlsx_report"
+            attachment="False"
+    />
+
+    <record id="download_report_wizard_form" model="ir.ui.view">
+        <field name="name">dap.download.wizard</field>
+        <field name="model">dap.download.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Write Report">
+                <group>
+                    <field name="patient_id"/>
+                    <field name="appointment_date"/>
+                </group>
+                <footer>
+                    <button name="download" string="Generate Report" type="object" class="btn-primary"/>
+                    <button name="action_generate_xlsx_report" string="Generate Report Excel" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="download_wizard" model="ir.actions.act_window">
+        <field name="name">Write Report Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dap.download.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="download_report_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

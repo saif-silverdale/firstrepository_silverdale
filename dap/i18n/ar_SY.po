@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dap
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 13:27+0000\n"
+"PO-Revision-Date: 2021-10-26 13:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dap
+#: model:ir.actions.act_window,name:dap.action_appointment
+#: model:ir.ui.menu,name:dap.appointment
+msgid "Appointment"
+msgstr "ميعاد"
+
+#. module: dap
+#: model:ir.actions.report,name:dap.report_dap_appointment
+msgid "Appointment Report"
+msgstr "تقرير التعيين"
+
+#. module: dap
+#: model:ir.actions.report,name:dap.report_dap_appointment_excel
+msgid "Appointment Report Excel"
+msgstr "تقرير موعد إكسل"
+
+#. module: dap
+#: model_terms:ir.ui.view,arch_db:dap.report_appointment
+msgid "Appointment Time"
+msgstr ""
+
+#. module: dap
+#: model:ir.actions.act_window,name:dap.action_attendant
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__attendant_id
+#: model:ir.ui.menu,name:dap.attendant
+msgid "Attendant"
+msgstr "المصاحبة"
+
+#. module: dap
+#: model_terms:ir.ui.view,arch_db:dap.download_report_wizard_form
+msgid "Cancel"
+msgstr "يلغي"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__create_uid
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__create_uid
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__create_uid
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__create_date
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__create_date
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__create_date
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: dap
+#: model:ir.ui.menu,name:dap.menu_root
+msgid "DAP"
+msgstr ""
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__display_name
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__display_name
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__display_name
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__display_name
+#: model:ir.model.fields,field_description:dap.field_report_dap_report_appointment_excel__display_name
+#: model:ir.model.fields,field_description:dap.field_vetapp_animals__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__doc_id
+msgid "Doc"
+msgstr "وثيقة"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__doctor_id
+#: model:ir.ui.menu,name:dap.doctor
+msgid "Doctor"
+msgstr "طبيبة"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__name
+msgid "Doctor Name"
+msgstr "اسم الطبيب"
+
+#. module: dap
+#: model:ir.actions.act_window,name:dap.action_doctor
+msgid "Doctors"
+msgstr "الأطباء"
+
+#. module: dap
+#: model_terms:ir.ui.view,arch_db:dap.dap_appointment_form
+msgid "Download Report"
+msgstr "تنزيل التقرير"
+
+#. module: dap
+#: model_terms:ir.ui.view,arch_db:dap.download_report_wizard_form
+msgid "Generate Report"
+msgstr "انشاء تقرير"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__id
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__id
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__id
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__id
+#: model:ir.model.fields,field_description:dap.field_report_dap_report_appointment_excel__id
+#: model:ir.model.fields,field_description:dap.field_vetapp_animals__id
+msgid "ID"
+msgstr "هوية شخصية"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment____last_update
+#: model:ir.model.fields,field_description:dap.field_dap_attendant____last_update
+#: model:ir.model.fields,field_description:dap.field_dap_doctor____last_update
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz____last_update
+#: model:ir.model.fields,field_description:dap.field_report_dap_report_appointment_excel____last_update
+#: model:ir.model.fields,field_description:dap.field_vetapp_animals____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__write_uid
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__write_uid
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__write_uid
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__write_date
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__write_date
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__write_date
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: dap
+#: model:ir.model.fields,help:dap.field_dap_appointment__pat_image
+msgid ""
+"Medium_sized Image of this ProviderIt is automatically Resized as a "
+"128x128px image, with aspect ratio preservedUse this field in form views or "
+"some kanban views."
+msgstr "صورة متوسطة الحجم لهذا الموفر يتم تغيير حجمها تلقائيًا لتصبح "
+"صورة 128 × 128 بكسل ، مع الاحتفاظ بنسبة العرض إلى الارتفاع ، استخدم هذا الحقل في طرق عرض النموذج أو"
+"بعض طرق عرض كانبان."
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: dap
+#: model:ir.ui.menu,name:dap.patient
+msgid "Patient"
+msgstr "المريض"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__animal_id
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__patient_id
+#: model_terms:ir.ui.view,arch_db:dap.report_appointment
+msgid "Patient Name"
+msgstr "اسم المريض"
+
+#. module: dap
+#: model:ir.actions.act_window,name:dap.action_patient
+msgid "Patients"
+msgstr "مرضى"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_attendant__regnum
+msgid "Registration Number"
+msgstr "رقم التسجيل"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__pat_doc_speciality
+#: model:ir.model.fields,field_description:dap.field_dap_doctor__speciality
+msgid "Speciality"
+msgstr "خاصية"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__pat_specie
+msgid "Specie"
+msgstr "نوع"
+
+#. module: dap
+#: model:ir.model,name:dap.model_dap_appointment
+msgid "Table for Appointments"
+msgstr "جدول المواعيد"
+
+#. module: dap
+#: model:ir.model,name:dap.model_dap_attendant
+msgid "Table for Attendant"
+msgstr "جدول المصاحبة"
+
+#. module: dap
+#: model:ir.model,name:dap.model_dap_doctor
+msgid "Table for Doctor"
+msgstr "طاولة للطبيب"
+
+#. module: dap
+#: model:ir.model,name:dap.model_vetapp_animals
+msgid "Table for Patient"
+msgstr "طاولة للمريض"
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__apt_time
+#: model:ir.model.fields,field_description:dap.field_dap_download_wiz__appointment_date
+msgid "Time of Appointment"
+msgstr "وقت التعيين"
+
+#. module: dap
+#: model_terms:ir.ui.view,arch_db:dap.download_report_wizard_form
+msgid "Write Report"
+msgstr "تقرير الكتابة"
+
+#. module: dap
+#: model:ir.actions.act_window,name:dap.download_wizard
+msgid "Write Report Wizard"
+msgstr "معالج كتابة التقرير"
+
+#. module: dap
+#: model:ir.model,name:dap.model_dap_download_wiz
+msgid "dap.download.wiz"
+msgstr ""
+
+#. module: dap
+#: model:ir.model.fields,field_description:dap.field_dap_appointment__pat_image
+msgid "medium_sized image"
+msgstr "صورة متوسطة الحجم"
+
+#. module: dap
+#: model:ir.model,name:dap.model_report_dap_report_appointment_excel
+msgid "report.dap.report_appointment_excel"
+msgstr ""

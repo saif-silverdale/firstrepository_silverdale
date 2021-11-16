@@ -1,0 +1,226 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="dap_doctor_list">
+            <field name="name">dap doctor list</field>
+            <field name="model">dap.doctor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="speciality"/>
+                    <field name="attendant_id" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_attendant_list">
+            <field name="name">dap attendant list</field>
+            <field name="model">dap.attendant</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="regnum"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_patient_list">
+            <field name="name">dap patient list</field>
+            <field name="model">vetapp.animals</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="specie_id"/>
+                    <field name="owner_id"/>
+                    <field name="ownerphone"/>
+                    <!--                    <field name="regnum"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_appointment_list">
+            <field name="name">dap appointment list</field>
+            <field name="model">dap.appointment</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="animal_id"/>
+                    <field name="pat_specie"/>
+                    <field name="doctor_id"/>
+                    <field name="pat_doc_speciality"/>
+                    <field name="apt_time"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_doctor_form_new">
+            <field name="name">dap doctor form</field>
+            <field name="model">dap.doctor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="%(dap.download_wizard)d" string="Download Report" type="action"
+                                class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_open_appointments" type="object" class="oe_stat_button"
+                                    icon="fa-calendar">
+                                <div class="o_stat_info">
+                                    <field name="appointment_number" class="o_stat_value"/>
+                                    <span class="o_stat_text">Appointments</span>
+                                </div>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="speciality"/>
+                            </group>
+                            <group>
+                                <field name="attendant_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_appointment_form_new">
+            <field name="name">dap appointment form</field>
+            <field name="model">dap.appointment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="pat_image" widget="image" class="oe_avatar"/>
+                        <group>
+                            <group>
+                                <field name="animal_id"/>
+                                <field name="doctor_id"/>
+                                <field name="pat_doc_speciality"/>
+                            </group>
+                            <group>
+                                <field name="apt_time"/>
+                                <field name="pat_specie"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="dap.action_doctor">
+            <field name="name">Doctors</field>
+            <field name="res_model">dap.doctor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dap.action_patient">
+            <field name="name">Patients</field>
+            <field name="res_model">vetapp.animals</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dap.action_attendant">
+            <field name="name">Attendant</field>
+            <field name="res_model">dap.attendant</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dap.action_appointment">
+            <field name="name">Appointment</field>
+            <field name="res_model">dap.appointment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_appointment_form_test">
+            <field name="name">dap testsecurity form</field>
+            <field name="model">dap.testsecurity</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button id="confirm_button" name="action_confirm" string="Confirm" class="btn-primary"
+                                confirm="Do you want to confirm?" type="object" states="draft"/>
+                        <button id="draft_button" name="action_draft" string="Draft" class="btn-primary" type="object"
+                                states="cancel"/>
+                        <button id="done_button" name="action_done" string="Done" class="btn-primary" type="object"
+                                states="confirm"/>
+                        <button id="cancel_button" name="action_cancel" string="Cancel" confirm="Do you want to cancel?"
+                                type="object" states="draft,cancel,confirm,done"/>
+                        <button id="orm_methods" name="orm_method" string="ORM Methods" class="btn-primary"
+                                type="object"/>
+                        <field name="state" widget="statusbar" options="{'clickable':'1'}"
+                               statusbar_visible="draft,done,confirm"/>
+                    </header>
+                    <button id="send_email" name="action_send_email" string="Send Email" type="object"
+                            class="oe_highlight"/>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="responsible"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="phone"/>
+                                <field name="active" invisible="1"/>
+                                <field name="email_id"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="dap_securitytest">
+            <field name="name">Security Test</field>
+            <field name="model">dap.testsecurity</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="responsible" groups="dap.module_dap_manager"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="dap.action_security">
+            <field name="name">Security Test</field>
+            <field name="res_model">dap.testsecurity</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <!--
+            <record model="ir.actions.server" id="dap.action_server">
+              <field name="name">dap server</field>
+              <field name="model_id" ref="model_dap_dap"/>
+              <field name="state">code</field>
+              <field name="code">
+                action = {
+                  "type": "ir.actions.act_window",
+                  "view_mode": "tree,form",
+                  "res_model": model._name,
+                }
+              </field>
+            </record>
+        -->
+        <!-- Top menu item -->
+        <menuitem name="Doctor Appointment" id="dap.menu_root" web_icon="dap,static/description/icon.png"/>
+        <!-- menu categories -->
+        <menuitem name="Doctor" id="dap.doctor" sequence="1" parent="dap.menu_root" action="dap.action_doctor"/>
+        <menuitem name="Patient" id="dap.patient" parent="dap.menu_root" action="dap.action_patient"/>
+        <menuitem name="Attendant" id="dap.attendant" sequence="1" parent="dap.menu_root"
+                  action="dap.action_attendant"/>
+        <menuitem name="Appointment" id="dap.appointment" parent="dap.menu_root" action="dap.action_appointment"/>
+        <menuitem name="Security_Test" id="dap.secutest" parent="dap.menu_root" action="dap.action_security"/>
+        <!-- actions -->
+        <!--
+            <menuitem name="List" id="dap.menu_1_list" parent="dap.menu_1"
+                      action="dap.action_window"/>
+            <menuitem name="Server to list" id="dap" parent="dap.menu_2"
+                      action="dap.action_server"/>
+        -->
+    </data>
+</odoo>

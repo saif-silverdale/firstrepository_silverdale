@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+         <record id="report_dap_appointment_excel" model="ir.actions.report">
+            <field name="name">Appointment Report Excel</field>
+            <field name="model">dap.appointment</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">dap.report_appointment_excel</field>
+            <field name="report_file">dap.report_appointment_excel</field>
+            <field name="binding_model_id" ref="model_dap_appointment"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dap_doctor,access_dap_doctor,model_dap_doctor,base.group_user,1,1,1,1
+access_dap_attendant,access_dap_attendant,model_dap_attendant,base.group_user,1,1,1,1
+access_dap_appointment,access_dap_appointment,model_dap_appointment,base.group_user,1,1,1,1
+access_dap_download_wiz,access_dap_download_wiz,model_dap_download_wiz,base.group_user,1,1,1,1
+access_dap_securitytest,acess_dap_securitytest,model_dap_testsecurity,dap.module_dap_doctor,1,1,1,1
